@@ -15,12 +15,14 @@ forEachCall = (element, i) => {
     const row = Math.floor(i / 3);
     const col = i % 3;
 
+    // Getting player character
     player = players[currentPlayer];
     // Updating UI
     element.textContent = player;
     // Saving state
     board[row][col] = player;
 
+    // Updating for next move
     if (currentPlayer === 0) currentPlayer = 1;
     else currentPlayer = 0;
 
