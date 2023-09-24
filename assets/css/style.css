@@ -19,7 +19,7 @@ body {
     background-color: #999933;
   }
 
-  .game-area {
+.game-area {
     text-align: center;
     background-color: white;
     padding: 2rem;
@@ -28,14 +28,14 @@ body {
     
   }
 
-  #board {
+#board {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 10px;
     margin-bottom: 1.5rem;
   }
 
-  .cell {
+.cell {
     width: 90px;
     height: 90px;
     display: flex;
@@ -51,3 +51,4 @@ body {
     display: flex;
     justify-content: space-between; 
 }
+
