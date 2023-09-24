@@ -72,6 +72,10 @@ forEachCall = (element, i) => {
     // Check winner logic
     winner = checkWinner();
 
+    if (winner !== "Draw" && winner !== "Nowin") {
+    } else if (winner === "Draw") {
+    }
+
     console.log(winner);
   });
 };
