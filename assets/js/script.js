@@ -105,8 +105,6 @@ forEachCall = (element, i) => {
       showResults(result);
     } else if (result === "Draw") {
     }
-
-    console.log(result);
   });
 };
 
