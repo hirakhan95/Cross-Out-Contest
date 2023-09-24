@@ -6,13 +6,16 @@ let board = [
 
 let currentPlayer = "X";
 
-const cells = document.querySelectorAll(".cell");
+const cells = document.getElementsByClassName("cell");
 
-functionForEach = (cell, index) => {
-  clickEventOnCell = () => {
-    console.log(index);
-  };
-  cell.addEventListener("click", clickEventOnCell);
+forEachCall = (element, i) => {
+  element.addEventListener("click", function () {
+    // Inside Click Event
+    const row = Math.floor(i / 3);
+    const col = i % 3;
+
+    console.log(i, row, col);
+  });
 };
 
-cells.forEach(functionForEach);
+Array.from(cells).forEach(forEachCall);
