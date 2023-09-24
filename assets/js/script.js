@@ -7,6 +7,8 @@ let board = [
 let players = ["X", "O"];
 let currentPlayer = 0;
 
+let playerScores = [0, 0];
+
 const cells = document.getElementsByClassName("cell");
 
 checkWinner = () => {
@@ -92,7 +94,7 @@ forEachCall = (element, i) => {
     // Updating UI
     element.textContent = player;
     // Saving state
-    board[row][col] = player;
+    board[row][col] = currentPlayer;
 
     // Updating for next move
     if (currentPlayer === 0) currentPlayer = 1;
@@ -101,10 +103,14 @@ forEachCall = (element, i) => {
     // Check winner logic
     result = checkWinner();
 
-    if (result !== "Draw" && result !== "Nowin") {
+    if (result !== "Nowin") {
       showResults(result);
-    } else if (result === "Draw") {
+      if (result !== "Draw") {
+        playerScores[result]++;
+      }
     }
+
+    console.log(playerScores);
   });
 };
 
