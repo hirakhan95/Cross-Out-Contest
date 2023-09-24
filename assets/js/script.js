@@ -16,11 +16,13 @@ forEachCall = (element, i) => {
     const col = i % 3;
 
     element.textContent = currentPlayer;
-    
+
+    board[row][col] = currentPlayer;
+
     if (currentPlayer === 0) currentPlayer = 1;
     else currentPlayer = 0;
 
-    console.log(currentPlayer);
+    console.log(board);
   });
 };
 
