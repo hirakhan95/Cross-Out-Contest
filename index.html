@@ -7,6 +7,8 @@
 
     <!-- font awesome and google fonts -->
     <link href='https://fonts.googleapis.com/css?family=Shadows Into Light' rel='stylesheet'>
+    <!-- font favicon -->
+    <link rel="icon" type="image/x-icon" href="assets/images/logo.png">
 
     <link rel="stylesheet" href="assets/css/style.css">
     <title>CrossOut Contest</title>
@@ -17,12 +19,24 @@
     </h1>
 
     <div class="game-area">
-
+        <div id="board">
+            <div class="cell"></div>
+            <div class="cell"></div>
+            <div class="cell"></div>
+            <div class="cell"></div>
+            <div class="cell"></div>
+            <div class="cell"></div>
+            <div class="cell"></div>
+            <div class="cell"></div>
+            <div class="cell"></div>
+          </div>
+        <button id="reset">Play Again</button>
+        <button id="Home">Home Page</button>
     </div>
 
     <div class="score-area">
-        <p class="scores">Correct Answers <span id="score">0</span></p>
-        <p class="scores">Incorrect Answers <span id="score">0</span></p>
+        <p class="scores">X's score: <span id="score">0</span></p>
+        <p class="scores">O's score: <span id="score">0</span></p>
     </div>
 
     <script src="assets/js/script.js"></script>
