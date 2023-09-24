@@ -11,6 +11,11 @@ let playerScores = [0, 0];
 
 const cells = document.getElementsByClassName("cell");
 
+function whoseTurn() {
+    document.getElementById('current-player').textContent = `
+${players[currentPlayer]}'s Turn`
+}
+
 checkWinner = () => {
   for (let i = 0; i < 3; i++) {
     // Horizontally check
@@ -109,6 +114,7 @@ forEachCall = (element, i) => {
     // Updating for next move
     if (currentPlayer === 0) currentPlayer = 1;
     else currentPlayer = 0;
+    whoseTurn(); 
 
     // Check winner logic
     result = checkWinner();
