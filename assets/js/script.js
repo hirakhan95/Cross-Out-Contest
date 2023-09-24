@@ -28,7 +28,7 @@ checkWinner = () => {
       return board[0][i];
     }
   }
-  
+  // Check for diagonal
   if (
     board[0][0] === board[1][1] &&
     board[1][1] === board[2][2] &&
@@ -36,6 +36,7 @@ checkWinner = () => {
   ) {
     return board[0][0];
   }
+  // Check for diagonal
   if (
     board[0][2] === board[1][1] &&
     board[1][1] === board[2][0] &&
