@@ -48,5 +48,6 @@ body {
   }
 
 .score-area {
-    text-align: center;
+    display: flex;
+    justify-content: space-between; 
 }
