@@ -52,6 +52,11 @@ checkWinner = () => {
   return "Draw";
 };
 
+function closePopUp() {
+  const resultPopUp = document.getElementById("resultPopUp");
+  resultPopUp.style.display = "None";
+}
+
 function showResults(result) {
   const resultPopUp = document.getElementById("resultPopUp");
   const popUpText = document.getElementById("popUpText");
