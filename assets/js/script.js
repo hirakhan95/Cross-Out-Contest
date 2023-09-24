@@ -88,6 +88,11 @@ function showResults(result) {
   resultPopUp.style.display = "flex";
 }
 
+function scoresUpdate() {
+    document.getElementById('score0').textContent = playerScores[0];
+    document.getElementById('score1').textContent = playerScores[1];
+}
+
 forEachCall = (element, i) => {
   element.addEventListener("click", function () {
     // Inside Click Event
@@ -112,10 +117,9 @@ forEachCall = (element, i) => {
       showResults(result);
       if (result !== "Draw") {
         playerScores[result]++;
+        scoresUpdate();
       }
     }
-
-    console.log(playerScores);
   });
 };
 
