@@ -16,7 +16,9 @@ forEachCall = (element, i) => {
     const col = i % 3;
 
     player = players[currentPlayer];
+    // Updating UI
     element.textContent = player;
+    // Saving state
     board[row][col] = player;
 
     if (currentPlayer === 0) currentPlayer = 1;
