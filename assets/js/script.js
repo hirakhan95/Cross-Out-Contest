@@ -11,6 +11,7 @@ const cells = document.getElementsByClassName("cell");
 
 checkWinner = () => {
   for (let i = 0; i < 3; i++) {
+    // Horizontally check
     if (
       board[i][0] === board[i][1] &&
       board[i][1] === board[i][2] &&
@@ -18,6 +19,7 @@ checkWinner = () => {
     ) {
       return board[i][0];
     }
+    // Vertically check
     if (
       board[0][i] === board[1][i] &&
       board[1][i] === board[2][i] &&
@@ -26,6 +28,7 @@ checkWinner = () => {
       return board[0][i];
     }
   }
+  
   if (
     board[0][0] === board[1][1] &&
     board[1][1] === board[2][2] &&
