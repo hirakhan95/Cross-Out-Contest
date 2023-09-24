@@ -79,10 +79,10 @@ function closePopUp() {
 function showResults(result) {
   const resultPopUp = document.getElementById("resultPopUp");
   const popUpText = document.getElementById("popUpText");
-  
-  if(result === "Draw") {
 
-  }else{
+  if (result === "Draw") {
+    popUpText.textContent = "This game is a draw";
+  } else {
     popUpText.textContent = `${players[result]} is the winner!`;
   }
   resultPopUp.style.display = "flex";
