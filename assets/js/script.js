@@ -52,9 +52,18 @@ checkWinner = () => {
   return "Draw";
 };
 
+function resetBoard() {
+  for (let i = 0; i < 3; i++) {
+    for (let j = 0; j < 3; j++) {
+        board[i][j] = "";
+    } 
+  }
+}
+
 function closePopUp() {
   const resultPopUp = document.getElementById("resultPopUp");
   resultPopUp.style.display = "None";
+  resetBoard();
 }
 
 function showResults(result) {
