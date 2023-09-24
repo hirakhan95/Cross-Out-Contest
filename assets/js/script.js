@@ -114,6 +114,8 @@ forEachCall = (element, i) => {
     // Updating for next move
     if (currentPlayer === 0) currentPlayer = 1;
     else currentPlayer = 0;
+
+    // Whose turn gets called
     whoseTurn(); 
 
     // Check winner logic
@@ -123,6 +125,8 @@ forEachCall = (element, i) => {
       showResults(result);
       if (result !== "Draw") {
         playerScores[result]++;
+
+        // Players scores updated
         scoresUpdate();
       }
     }
