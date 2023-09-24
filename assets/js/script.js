@@ -34,10 +34,4 @@ a1 = (i, k, l) => {
   console.log(i, k, l);
 };
 
-function a2(i) {
-  console.log(i);
-}
-
-[1, 2, 3].forEach(function (i) {
-  console.log(i);
-});
+[1, 2, 3].forEach(a1);
