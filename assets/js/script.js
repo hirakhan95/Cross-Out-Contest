@@ -4,7 +4,7 @@ let board = [
   ["", "", ""],
 ];
 
-// let players = ["F", "H"];
+let players = ["X", "O"];
 let currentPlayer = 0;
 
 const cells = document.getElementsByClassName("cell");
@@ -15,9 +15,9 @@ forEachCall = (element, i) => {
     const row = Math.floor(i / 3);
     const col = i % 3;
 
-    element.textContent = currentPlayer;
-
-    board[row][col] = currentPlayer;
+    player = players[currentPlayer];
+    element.textContent = player;
+    board[row][col] = player;
 
     if (currentPlayer === 0) currentPlayer = 1;
     else currentPlayer = 0;
