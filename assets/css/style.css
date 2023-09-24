@@ -1,3 +1,5 @@
-body {
-    background-color: blue;
+.logo {
+    width: 100px;  
+    height: auto; 
+    transition: all 0.3s ease;
 }
