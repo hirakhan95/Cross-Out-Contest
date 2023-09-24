@@ -52,6 +52,13 @@ checkWinner = () => {
   return "Draw";
 };
 
+function showResults(result) {
+  const resultPopUp = document.getElementById("resultPopUp");
+  const popUpText = document.getElementById("popUpText");
+  popUpText.textContent = `${result} is the winner!`;
+  resultPopUp.style.display = "flex";
+}
+
 forEachCall = (element, i) => {
   element.addEventListener("click", function () {
     // Inside Click Event
@@ -73,9 +80,8 @@ forEachCall = (element, i) => {
     result = checkWinner();
 
     if (result !== "Draw" && result !== "Nowin") {
-        
+      showResults(result);
     } else if (result === "Draw") {
-
     }
 
     console.log(result);
