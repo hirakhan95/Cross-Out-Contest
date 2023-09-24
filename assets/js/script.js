@@ -8,13 +8,10 @@ let currentPlayer = "X";
 
 const cells = document.querySelectorAll(".cell");
 
-////
-
-clickEventOnCell = () => {
-  console.log(index);
-};
-
 functionForEach = (cell, index) => {
+  clickEventOnCell = () => {
+    console.log(index);
+  };
   cell.addEventListener("click", clickEventOnCell);
 };
 
