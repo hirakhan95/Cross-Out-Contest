@@ -40,8 +40,11 @@ checkWinner = () => {
   ) {
     return board[0][2];
   }
+  // Check for draw
   for (let i = 0; i < 3; i++)
-    for (let j = 0; j < 3; j++) if (board[i][j] === "") return "Nowin";
+    for (let j = 0; j < 3; j++)
+      // If "" exist that no body wins
+      if (board[i][j] === "") return "Nowin";
   return "Draw";
 };
 
