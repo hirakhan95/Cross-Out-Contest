@@ -1,44 +1,55 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
     <!-- font awesome and google fonts -->
-    <link href='https://fonts.googleapis.com/css?family=Shadows Into Light' rel='stylesheet'>
+    <link
+      href="https://fonts.googleapis.com/css?family=Shadows Into Light"
+      rel="stylesheet"
+    />
     <!-- font favicon -->
-    <link rel="icon" type="image/x-icon" href="assets/images/logo.png">
+    <link rel="icon" type="image/x-icon" href="assets/images/logo.png" />
 
-    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/style.css" />
     <title>CrossOut Contest</title>
-</head>
-<body>
+  </head>
+  <body>
     <h1 class="heading">
-        <img class="logo" src="assets/images/logo.png" alt="logo"> Cross Out Contest
+      <img class="logo" src="assets/images/logo.png" alt="logo" /> Cross Out
+      Contest
     </h1>
     <div class="game-area">
-        <div id="board">
-            <div class="cell"></div>
-            <div class="cell"></div>
-            <div class="cell"></div>
-            <div class="cell"></div>
-            <div class="cell"></div>
-            <div class="cell"></div>
-            <div class="cell"></div>
-            <div class="cell"></div>
-            <div class="cell"></div>
-          </div>
-        <button id="reset">Play Again</button>
-        <button id="Home">Home Page</button>
+      <div id="board">
+        <div class="cell"></div>
+        <div class="cell"></div>
+        <div class="cell"></div>
+        <div class="cell"></div>
+        <div class="cell"></div>
+        <div class="cell"></div>
+        <div class="cell"></div>
+        <div class="cell"></div>
+        <div class="cell"></div>
+      </div>
+      <button id="reset">Play Again</button>
+      <button id="Home">Home Page</button>
+    </div>
+
+    <!-- Game Pop Up -->
+    <div id="resultPopUp" class="popUp">
+      <div class="popUpContent">
+        <span class="close-button">&times;</span>
+        <p id="popUpText"></p>
+      </div>
     </div>
 
     <!-- score area -->
     <div class="score-area">
-        <p class="scores">X's score: <span id="score">0</span></p>
-        <p class="scores">O's score: <span id="score">0</span></p>
+      <p class="scores">X's score: <span id="score">0</span></p>
+      <p class="scores">O's score: <span id="score">0</span></p>
     </div>
 
     <script src="assets/js/script.js"></script>
-</body>
+  </body>
 </html>

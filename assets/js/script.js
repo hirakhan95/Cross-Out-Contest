@@ -70,13 +70,15 @@ forEachCall = (element, i) => {
     else currentPlayer = 0;
 
     // Check winner logic
-    winner = checkWinner();
+    result = checkWinner();
 
-    if (winner !== "Draw" && winner !== "Nowin") {
-    } else if (winner === "Draw") {
+    if (result !== "Draw" && result !== "Nowin") {
+        
+    } else if (result === "Draw") {
+
     }
 
-    console.log(winner);
+    console.log(result);
   });
 };
 
