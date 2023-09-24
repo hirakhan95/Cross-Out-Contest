@@ -3,3 +3,8 @@
     height: auto; 
     transition: all 0.3s ease;
 }
+
+body {
+    font-family: 'Shadows Into Light';
+    font-size: 22px;
+  }
