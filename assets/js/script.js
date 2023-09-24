@@ -53,11 +53,19 @@ checkWinner = () => {
 };
 
 function resetBoard() {
+  // Board state reset
   for (let i = 0; i < 3; i++) {
     for (let j = 0; j < 3; j++) {
-        board[i][j] = "";
-    } 
+      board[i][j] = "";
+    }
   }
+
+  // Board UI reset
+  function cellTextReset(element) {
+    element.textContent = "";
+  }
+
+  Array.from(cells).forEach(cellTextReset);
 }
 
 function closePopUp() {
