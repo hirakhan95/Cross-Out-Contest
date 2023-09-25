@@ -75,15 +75,10 @@ body {
   }
   
 .popUp-button {
-
-    /* position: absolute;
-    right: 15px;
-    top: 15px;
-    cursor: pointer;
-    font-size: 1.2rem; */
+    width: 150px;
 }
 
-  .button {
+.button {
     font-family: 'Shadows Into Light';
     position: relative;
     background-color: #fffdb7;
@@ -91,16 +86,19 @@ body {
     font-size: 20px;
     color: black;
     padding: 20px;
-    width: 200px;
     border-radius: 50%;
     text-align: center;
     transition-duration: 0.4s;
     text-decoration: none;
     overflow: hidden;
     cursor: pointer;
-  }
+}
+
+.playAgain-button {
+    width: 200px;
+}
   
-  .button:after {
+.button:after {
     content: "";
     background: #f1f1f1;
     display: block;
@@ -111,11 +109,11 @@ body {
     margin-top: -120%;
     opacity: 0;
     transition: all 0.8s
-  }
+}
   
-  .button:active:after {
+.button:active:after {
     padding: 0;
     margin: 0;
     opacity: 1;
     transition: 0s
-  }
+}
