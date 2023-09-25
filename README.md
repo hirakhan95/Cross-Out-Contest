@@ -1,4 +1,4 @@
-# ![Game Logo](./assets/images/logo-small.png) Cross Out Contest
+# ![Game Logo](./assets/images/logo-32.png) Cross Out Contest
 
 Cross Out Contest is a classic two-player game, also known as Tic Tac Toe or Xs and Os. Players take turns to place their marker ('X' or 'O') on a 3x3 grid, aiming to get three of their markers in a row either horizontally, vertically, or diagonally.
 
