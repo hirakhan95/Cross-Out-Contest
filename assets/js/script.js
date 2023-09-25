@@ -1,150 +1,155 @@
-let board = [
-  ["", "", ""],
-  ["", "", ""],
-  ["", "", ""],
-];
-
 const allConstants = {
-    'noWin': 'No Win',
-    'draw': 'Draw'
-}
-
-let players = ["X", "O"];
-let currentPlayer = 0;
-
-let playerScores = [0, 0];
-
-const cells = document.getElementsByClassName("cell");
-
-function whoseTurn() {
-  document.getElementById("current-player").textContent = `
-${players[currentPlayer]}'s Turn`;
-}
-
-function checkWinner () {
-  for (let i = 0; i < 3; i++) {
-    // Horizontally check
-    if (
-      board[i][0] === board[i][1] &&
-      board[i][1] === board[i][2] &&
-      board[i][0] !== ""
-    ) {
-      return board[i][0];
-    }
-    // Vertically check
-    if (
-      board[0][i] === board[1][i] &&
-      board[1][i] === board[2][i] &&
-      board[0][i] !== ""
-    ) {
-      return board[0][i];
-    }
-  }
-  // Check for diagonal
-  if (
-    board[0][0] === board[1][1] &&
-    board[1][1] === board[2][2] &&
-    board[0][0] !== ""
-  ) {
-    return board[0][0];
-  }
-  // Check for diagonal
-  if (
-    board[0][2] === board[1][1] &&
-    board[1][1] === board[2][0] &&
-    board[0][2] !== ""
-  ) {
-    return board[0][2];
-  }
-  // Check for draw
-  for (let i = 0; i < 3; i++)
-    for (let j = 0; j < 3; j++)
-      // If "" exist that no body wins
-      if (board[i][j] === "") return allConstants['noWin'];
-  return allConstants['draw'];
+  noWin: "No Win",
+  draw: "Draw",
 };
 
-function resetBoard() {
-  // Board state reset
-  for (let i = 0; i < 3; i++) {
-    for (let j = 0; j < 3; j++) {
-      board[i][j] = "";
-    }
+class TicTacToe {
+  constructor() {
+    this.board = [
+      ["", "", ""],
+      ["", "", ""],
+      ["", "", ""],
+    ];
+    this.players = ["X", "O"];
+    this.currentPlayer = 0;
+    this.playerScores = [0, 0];
+    this.cells = document.getElementsByClassName("cell");
   }
 
-  // Board UI reset
-  function cellTextReset(element) {
-    element.textContent = "";
+  whoseTurn() {
+    document.getElementById("current-player").textContent = `
+  ${this.players[this.currentPlayer]}'s Turn`;
   }
 
-  Array.from(cells).forEach(cellTextReset);
-}
-
-function closePopUp() {
-  const resultPopUp = document.getElementById("resultPopUp");
-  resultPopUp.style.display = "None";
-  resetBoard();
-}
-
-function showResults(result) {
-  const resultPopUp = document.getElementById("resultPopUp");
-  const popUpText = document.getElementById("popUpText");
-
-  if (result === "Draw") {
-    popUpText.textContent = "This game is a draw";
-  } else {
-    popUpText.textContent = ` Hurray! ${players[result]} is the winner! :)`;
-  }
-  resultPopUp.style.display = "flex";
-}
-
-function scoresUpdate() {
-  document.getElementById("score0").textContent = playerScores[0];
-  document.getElementById("score1").textContent = playerScores[1];
-}
-
-function onCellClick(element, i) {
-  // Inside Click Event
-  const row = Math.floor(i / 3);
-  const col = i % 3;
-
-  // Check if clicked cell should be triggered
-  if (board[row][col] === "") {
-    // Getting player character
-    player = players[currentPlayer];
-    // Updating UI
-    element.textContent = player;
-    // Saving state
-    board[row][col] = currentPlayer;
-
-    // Updating for next move
-    if (currentPlayer === 0) currentPlayer = 1;
-    else currentPlayer = 0;
-
-    // Whose turn gets called
-    whoseTurn();
-
-    // Check winner logic
-    result = checkWinner();
-
-    if (result !== allConstants['noWin']) {
-      showResults(result);
-
-      if (result !== allConstants['draw']) {
-        playerScores[result]++;
-
-        // Players scores updated
-        scoresUpdate();
+  checkWinner() {
+    for (let i = 0; i < 3; i++) {
+      // Horizontally check
+      if (
+        this.board[i][0] === this.board[i][1] &&
+        this.board[i][1] === this.board[i][2] &&
+        this.board[i][0] !== ""
+      ) {
+        return this.board[i][0];
+      }
+      // Vertically check
+      if (
+        this.board[0][i] === this.board[1][i] &&
+        this.board[1][i] === this.board[2][i] &&
+        this.board[0][i] !== ""
+      ) {
+        return this.board[0][i];
       }
     }
+    // Check for diagonal
+    if (
+      this.board[0][0] === this.board[1][1] &&
+      this.board[1][1] === this.board[2][2] &&
+      this.board[0][0] !== ""
+    ) {
+      return this.board[0][0];
+    }
+    // Check for diagonal
+    if (
+      this.board[0][2] === this.board[1][1] &&
+      this.board[1][1] === this.board[2][0] &&
+      this.board[0][2] !== ""
+    ) {
+      return this.board[0][2];
+    }
+    // Check for draw
+    for (let i = 0; i < 3; i++)
+      for (let j = 0; j < 3; j++)
+        // If "" exist that no body wins
+        if (this.board[i][j] === "") return allConstants["noWin"];
+    return allConstants["draw"];
+  }
+
+  resetBoard() {
+    // Board state reset
+    for (let i = 0; i < 3; i++) {
+      for (let j = 0; j < 3; j++) {
+        this.board[i][j] = "";
+      }
+    }
+
+    // Board UI reset
+    function cellTextReset(element) {
+      element.textContent = "";
+    }
+
+    Array.from(this.cells).forEach(cellTextReset);
+  }
+
+  closePopUp() {
+    const resultPopUp = document.getElementById("resultPopUp");
+    resultPopUp.style.display = "None";
+    this.resetBoard();
+  }
+
+  showResults(result) {
+    const resultPopUp = document.getElementById("resultPopUp");
+    const popUpText = document.getElementById("popUpText");
+
+    if (result === "Draw") {
+      popUpText.textContent = "This game is a draw";
+    } else {
+      popUpText.textContent = ` Hurray! ${this.players[result]} is the winner! :)`;
+    }
+    resultPopUp.style.display = "flex";
+  }
+
+  scoresUpdate() {
+    document.getElementById("score0").textContent = this.playerScores[0];
+    document.getElementById("score1").textContent = this.playerScores[1];
+  }
+
+  createListeners() {
+    function onCellClick(element, i) {
+      // Inside Click Event
+      const row = Math.floor(i / 3);
+      const col = i % 3;
+
+      // Check if clicked cell should be triggered
+      if (tictactoe.board[row][col] === "") {
+        // Getting player character
+        let player = tictactoe.players[tictactoe.currentPlayer];
+        // Updating UI
+        element.textContent = player;
+        // Saving state
+        tictactoe.board[row][col] = tictactoe.currentPlayer;
+
+        // Updating for next move
+        if (tictactoe.currentPlayer === 0) tictactoe.currentPlayer = 1;
+        else tictactoe.currentPlayer = 0;
+
+        // Whose turn gets called
+        tictactoe.whoseTurn();
+
+        // Check winner logic
+        let result = tictactoe.checkWinner();
+
+        if (result !== allConstants["noWin"]) {
+          tictactoe.showResults(result);
+
+          if (result !== allConstants["draw"]) {
+            tictactoe.playerScores[result]++;
+
+            // Players scores updated
+            tictactoe.scoresUpdate();
+          }
+        }
+      }
+    }
+
+    function forEachCall(cell, index) {
+      cell.addEventListener("click", function () {
+        onCellClick(cell, index);
+      });
+    }
+
+    Array.from(this.cells).forEach(forEachCall);
   }
 }
 
-forEachCall = (cell, index) => {
-  function abc() {
-    onCellClick(cell, index);
-  }
-  cell.addEventListener("click", abc);
-};
-
-Array.from(cells).forEach(forEachCall);
+let tictactoe = new TicTacToe();
+tictactoe.createListeners();

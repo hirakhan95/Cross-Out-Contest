@@ -33,7 +33,11 @@
         <div class="cell"></div>
         <div class="cell"></div>
       </div>
-      <button class="button playAgain-button" id="reset" onclick="resetBoard()">
+      <button
+        class="button playAgain-button"
+        id="reset"
+        onclick="tictactoe.resetBoard()"
+      >
         Play Again
       </button>
     </div>
@@ -42,7 +46,11 @@
     <div id="resultPopUp" class="popUp">
       <div class="popUpContent">
         <p id="popUpText"></p>
-        <button class="button popUp-button" id="close" onclick="closePopUp()">
+        <button
+          class="button popUp-button"
+          id="close"
+          onclick="tictactoe.closePopUp()"
+        >
           Close
         </button>
       </div>
