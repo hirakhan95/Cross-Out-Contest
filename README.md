@@ -100,7 +100,3 @@ The game can be deployed using various platforms like GitHub Pages, Netlify, or 
 #### Acknowledgements
 
 - Special thanks to the online web development community for providing countless resources and discussions on Tic Tac Toe implementations.
-
----
-
-This documentation provides a comprehensive overview of the "Cross Out Contest" project. You can further customize it based on any additional features or details you'd like to include.
