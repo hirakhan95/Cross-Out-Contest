@@ -103,7 +103,8 @@ forEachCall = (element, i) => {
     // Inside Click Event
     const row = Math.floor(i / 3);
     const col = i % 3;
-    
+
+    // Check if clicked cell should be triggered
     if (board[row][col] === "") {
       // Getting player character
       player = players[currentPlayer];
