@@ -4,6 +4,11 @@ let board = [
   ["", "", ""],
 ];
 
+const allConstants = {
+    'noWin': 'No Win',
+    'draw': 'Draw'
+}
+
 let players = ["X", "O"];
 let currentPlayer = 0;
 
@@ -16,7 +21,7 @@ function whoseTurn() {
 ${players[currentPlayer]}'s Turn`;
 }
 
-checkWinner = () => {
+function checkWinner () {
   for (let i = 0; i < 3; i++) {
     // Horizontally check
     if (
@@ -55,8 +60,8 @@ checkWinner = () => {
   for (let i = 0; i < 3; i++)
     for (let j = 0; j < 3; j++)
       // If "" exist that no body wins
-      if (board[i][j] === "") return "Nowin";
-  return "Draw";
+      if (board[i][j] === "") return allConstants['noWin'];
+  return allConstants['draw'];
 };
 
 function resetBoard() {
@@ -98,43 +103,48 @@ function scoresUpdate() {
   document.getElementById("score1").textContent = playerScores[1];
 }
 
-forEachCall = (element, i) => {
-  element.addEventListener("click", function () {
-    // Inside Click Event
-    const row = Math.floor(i / 3);
-    const col = i % 3;
+function onCellClick(element, i) {
+  // Inside Click Event
+  const row = Math.floor(i / 3);
+  const col = i % 3;
 
-    // Check if clicked cell should be triggered
-    if (board[row][col] === "") {
-      // Getting player character
-      player = players[currentPlayer];
-      // Updating UI
-      element.textContent = player;
-      // Saving state
-      board[row][col] = currentPlayer;
+  // Check if clicked cell should be triggered
+  if (board[row][col] === "") {
+    // Getting player character
+    player = players[currentPlayer];
+    // Updating UI
+    element.textContent = player;
+    // Saving state
+    board[row][col] = currentPlayer;
 
-      // Updating for next move
-      if (currentPlayer === 0) currentPlayer = 1;
-      else currentPlayer = 0;
+    // Updating for next move
+    if (currentPlayer === 0) currentPlayer = 1;
+    else currentPlayer = 0;
 
-      // Whose turn gets called
-      whoseTurn();
+    // Whose turn gets called
+    whoseTurn();
 
-      // Check winner logic
-      result = checkWinner();
+    // Check winner logic
+    result = checkWinner();
 
-      if (result !== "Nowin") {
-        showResults(result);
+    if (result !== allConstants['noWin']) {
+      showResults(result);
 
-        if (result !== "Draw") {
-          playerScores[result]++;
+      if (result !== allConstants['draw']) {
+        playerScores[result]++;
 
-          // Players scores updated
-          scoresUpdate();
-        }
+        // Players scores updated
+        scoresUpdate();
       }
     }
-  });
+  }
+}
+
+forEachCall = (cell, index) => {
+  function abc() {
+    onCellClick(cell, index);
+  }
+  cell.addEventListener("click", abc);
 };
 
 Array.from(cells).forEach(forEachCall);
