@@ -16,7 +16,7 @@ body {
     justify-content: center;
     height: 100vh;
     margin: 0;
-    background-color: #999933;
+    background-color: #fffdb7;
   }
 
 .game-area {
@@ -52,7 +52,7 @@ body {
     justify-content: space-between; 
 }
 
-/* Modal Styles */
+/* PopUp Styles */
 .popUp {
     display: none;
     position: fixed;
@@ -66,7 +66,7 @@ body {
     justify-content: center;
   }
   
-  .popUpContent {
+.popUpContent {
     padding: 20px;
     background-color: #fff;
     border-radius: 10px;
@@ -74,10 +74,48 @@ body {
     text-align: center;
   }
   
-  .close-button {
-    position: absolute;
+.popUp-button {
+
+    /* position: absolute;
     right: 15px;
     top: 15px;
     cursor: pointer;
-    font-size: 1.2rem;
+    font-size: 1.2rem; */
+}
+
+  .button {
+    font-family: 'Shadows Into Light';
+    position: relative;
+    background-color: #fffdb7;
+    border: none;
+    font-size: 20px;
+    color: black;
+    padding: 20px;
+    width: 200px;
+    border-radius: 50%;
+    text-align: center;
+    transition-duration: 0.4s;
+    text-decoration: none;
+    overflow: hidden;
+    cursor: pointer;
+  }
+  
+  .button:after {
+    content: "";
+    background: #f1f1f1;
+    display: block;
+    position: absolute;
+    padding-top: 200%;
+    padding-left: 350%;
+    margin-left: -20px !important;
+    margin-top: -120%;
+    opacity: 0;
+    transition: all 0.8s
+  }
+  
+  .button:active:after {
+    padding: 0;
+    margin: 0;
+    opacity: 1;
+    transition: 0s
   }

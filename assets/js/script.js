@@ -88,7 +88,7 @@ function showResults(result) {
   if (result === "Draw") {
     popUpText.textContent = "This game is a draw";
   } else {
-    popUpText.textContent = `${players[result]} is the winner!`;
+    popUpText.textContent = ` Hurray! ${players[result]} is the winner! :)`;
   }
   resultPopUp.style.display = "flex";
 }
@@ -123,6 +123,7 @@ forEachCall = (element, i) => {
 
     if (result !== "Nowin") {
       showResults(result);
+      
       if (result !== "Draw") {
         playerScores[result]++;
 
