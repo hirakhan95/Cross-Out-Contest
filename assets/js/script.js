@@ -150,7 +150,12 @@ class TicTacToe {
     Array.from(this.cells).forEach(forEachCall);
   }
 
-  manualClickTrigger(index) {
+  manualClickTriggerRaw(index) {
+    this.cells[index].click();
+  }
+
+  manualClickTriggerWithAxis(row_index, col_index) {
+    let index = row_index * 3 + col_index;
     this.cells[index].click();
   }
 }

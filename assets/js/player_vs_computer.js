@@ -15,7 +15,7 @@ function runFunction() {
 
     computerSelection =
       possibleIndexes[Math.floor(Math.random() * possibleIndexes.length)];
-    tictactoe.manualClickTrigger(computerSelection);
+    tictactoe.manualClickTriggerRaw(computerSelection);
   }
 }
 
