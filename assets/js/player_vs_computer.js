@@ -1,4 +1,4 @@
-let tictactoe = new TicTacToe();
+let tictactoe = new TicTacToe((players = ["X", "O"]));
 tictactoe.createListeners();
 
 function runFunction() {

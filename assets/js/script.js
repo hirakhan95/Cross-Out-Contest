@@ -4,13 +4,13 @@ const allConstants = {
 };
 
 class TicTacToe {
-  constructor() {
+  constructor(players = ["X", "O"]) {
     this.board = [
       ["", "", ""],
       ["", "", ""],
       ["", "", ""],
     ];
-    this.players = ["X", "O"];
+    this.players = players;
     this.currentPlayer = 0;
     this.playerScores = [0, 0];
     this.cells = document.getElementsByClassName("cell");
