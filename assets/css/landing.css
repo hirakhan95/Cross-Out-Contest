@@ -1,0 +1,13 @@
+.menu-area {
+    text-align: center;
+    padding: 2rem;
+    border-radius: 20px;
+    width: 360px;
+    margin: 0 auto;
+}
+
+.menu-button {
+    display: block;
+    margin: 1rem auto;
+    width: 250px;
+}
