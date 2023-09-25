@@ -149,7 +149,8 @@ class TicTacToe {
 
     Array.from(this.cells).forEach(forEachCall);
   }
-}
 
-let tictactoe = new TicTacToe();
-tictactoe.createListeners();
+  manualClickTrigger(index) {
+    this.cells[index].click();
+  }
+}
