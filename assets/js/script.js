@@ -12,8 +12,8 @@ let playerScores = [0, 0];
 const cells = document.getElementsByClassName("cell");
 
 function whoseTurn() {
-    document.getElementById('current-player').textContent = `
-${players[currentPlayer]}'s Turn`
+  document.getElementById("current-player").textContent = `
+${players[currentPlayer]}'s Turn`;
 }
 
 checkWinner = () => {
@@ -94,8 +94,8 @@ function showResults(result) {
 }
 
 function scoresUpdate() {
-    document.getElementById('score0').textContent = playerScores[0];
-    document.getElementById('score1').textContent = playerScores[1];
+  document.getElementById("score0").textContent = playerScores[0];
+  document.getElementById("score1").textContent = playerScores[1];
 }
 
 forEachCall = (element, i) => {
@@ -103,32 +103,34 @@ forEachCall = (element, i) => {
     // Inside Click Event
     const row = Math.floor(i / 3);
     const col = i % 3;
+    
+    if (board[row][col] === "") {
+      // Getting player character
+      player = players[currentPlayer];
+      // Updating UI
+      element.textContent = player;
+      // Saving state
+      board[row][col] = currentPlayer;
 
-    // Getting player character
-    player = players[currentPlayer];
-    // Updating UI
-    element.textContent = player;
-    // Saving state
-    board[row][col] = currentPlayer;
+      // Updating for next move
+      if (currentPlayer === 0) currentPlayer = 1;
+      else currentPlayer = 0;
 
-    // Updating for next move
-    if (currentPlayer === 0) currentPlayer = 1;
-    else currentPlayer = 0;
+      // Whose turn gets called
+      whoseTurn();
 
-    // Whose turn gets called
-    whoseTurn(); 
+      // Check winner logic
+      result = checkWinner();
 
-    // Check winner logic
-    result = checkWinner();
+      if (result !== "Nowin") {
+        showResults(result);
 
-    if (result !== "Nowin") {
-      showResults(result);
-      
-      if (result !== "Draw") {
-        playerScores[result]++;
+        if (result !== "Draw") {
+          playerScores[result]++;
 
-        // Players scores updated
-        scoresUpdate();
+          // Players scores updated
+          scoresUpdate();
+        }
       }
     }
   });
