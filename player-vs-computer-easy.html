@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- font awesome and google fonts -->
+    <link
+      href="https://fonts.googleapis.com/css?family=Shadows Into Light"
+      rel="stylesheet"
+    />
+    <!-- font favicon -->
+    <link rel="icon" type="image/x-icon" href="assets/images/logo-small.png" />
+
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <title>Cross Out Contest | player vs player</title>
+  </head>
+  <body>
+    <h1 class="heading">
+      <img class="logo" src="assets/images/logo-small.png" alt="logo" /> Cross
+      Out Contest
+    </h1>
+    <h3 id="current-player">X's Turn</h3>
+    <div class="game-area">
+      <div id="board">
+        <div class="cell"></div>
+        <div class="cell"></div>
+        <div class="cell"></div>
+        <div class="cell"></div>
+        <div class="cell"></div>
+        <div class="cell"></div>
+        <div class="cell"></div>
+        <div class="cell"></div>
+        <div class="cell"></div>
+      </div>
+      <button
+        class="button playAgain-button"
+        id="reset"
+        onclick="tictactoe.resetBoard()"
+      >
+        Play Again
+      </button>
+    </div>
+
+    <!-- Game Pop Up -->
+    <div id="resultPopUp" class="popUp">
+      <div class="popUpContent">
+        <p id="popUpText"></p>
+        <button
+          class="button popUp-button"
+          id="close"
+          onclick="tictactoe.closePopUp()"
+        >
+          Close
+        </button>
+      </div>
+    </div>
+
+    <!-- score area -->
+    <div class="score-area">
+      <p class="scores">X's score: <span id="score0">0</span></p>
+      <p class="scores">Comp's score: <span id="score1">0</span></p>
+    </div>
+
+    <script src="assets/js/script.js"></script>
+    <script src="assets/js/player_vs_computer_easy.js"></script>
+  </body>
+</html>
