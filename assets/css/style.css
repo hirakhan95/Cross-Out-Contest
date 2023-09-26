@@ -101,6 +101,7 @@ body {
 .button {
     font-family: 'Shadows Into Light';
     position: relative;
+    width: 150px;
     background-color: var(--secondary-color);
     border: none;
     font-size: 20px;
@@ -114,10 +115,6 @@ body {
     cursor: pointer;
 }
 
-.playAgain-button {
-    width: 200px;
-}
-  
 .button:after {
     content: "";
     background: var(--white-light-color);
@@ -137,6 +134,8 @@ body {
     opacity: 1;
     transition: 0s
 }
+
+/** Tutorial Page styling */
 
 .tutorial {
     display: flex;
@@ -180,4 +179,64 @@ body {
 
 .tutorial-text  {
     text-align: center;
+}
+
+
+/* --------- Media Queries -----------*/
+
+@media only screen and (max-width: 768px) {
+    body {
+        height: 100vh;
+    }
+
+    .game-area {
+        width: 90%;
+        padding: 1rem;
+    }
+
+    #board, .board-small {
+        gap: 5px;
+    }
+
+    .cell, .cell-tutorial {
+        width: 60px;
+        height: 60px;
+    }
+
+    .button, .popUp-button {
+        width: 120px;
+    }
+
+    .tutorial {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .tutorial > div {
+        margin-right: 0;
+        margin-bottom: 20px;
+    }
+
+    .how-to-page {
+        width: 80%;
+    }
+}
+
+@media only screen and (min-width: 769px) and (max-width: 1024px) {
+    .game-area {
+        width: 80%;
+    }
+
+    .cell, .cell-tutorial {
+        width: 70px;
+        height: 70px;
+    }
+
+    .button, .popUp-button {
+        width: 130px;
+    }
+
+    .how-to-page {
+        width: 70%;
+    }
 }
