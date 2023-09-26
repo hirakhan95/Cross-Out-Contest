@@ -5,6 +5,7 @@ const allConstants = {
 
 class TicTacToe {
   constructor(players = ["X", "O"]) {
+    this.gameStatus = "started";
     this.board = [
       ["", "", ""],
       ["", "", ""],
@@ -77,6 +78,7 @@ class TicTacToe {
       element.textContent = "";
     }
 
+    this.gameStatus = "started";
     Array.from(this.cells).forEach(cellTextReset);
   }
 
@@ -90,6 +92,7 @@ class TicTacToe {
     const resultPopUp = document.getElementById("resultPopUp");
     const popUpText = document.getElementById("popUpText");
 
+    this.gameStatus = "ended";
     if (result === "Draw") {
       popUpText.textContent = "This game is a draw";
     } else {
@@ -110,7 +113,10 @@ class TicTacToe {
       const col = i % 3;
 
       // Check if clicked cell should be triggered
-      if (tictactoe.board[row][col] === "") {
+      if (
+        tictactoe.board[row][col] === "" &&
+        tictactoe.gameStatus === "started"
+      ) {
         // Getting player character
         let player = tictactoe.players[tictactoe.currentPlayer];
         // Updating UI
