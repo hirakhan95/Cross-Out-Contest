@@ -93,10 +93,19 @@ class TicTacToe {
     const popUpText = document.getElementById("popUpText");
 
     this.gameStatus = "ended";
+
     if (result === "Draw") {
       popUpText.textContent = "This game is a draw";
+      playAudio('lose');
     } else {
-      popUpText.textContent = ` Hurray! ${this.players[result]} is the winner! :)`;
+        if (this.players[result] === 'Comp') {
+          popUpText.textContent = ` Too bad! ${this.players[result]} is the winner! :(`;
+          playAudio('lose');
+        }
+        else {
+          popUpText.textContent = ` Hurray! ${this.players[result]} is the winner! :)`;
+          playAudio('win');
+        }
     }
     resultPopUp.style.display = "flex";
   }
@@ -117,6 +126,7 @@ class TicTacToe {
         tictactoe.board[row][col] === "" &&
         tictactoe.gameStatus === "started"
       ) {
+        playAudio('click');
         // Getting player character
         let player = tictactoe.players[tictactoe.currentPlayer];
         // Updating UI
@@ -164,4 +174,15 @@ class TicTacToe {
     let index = row_index * 3 + col_index;
     this.cells[index].click();
   }
+}
+
+function playAudio(audioToPlay) {
+  const audioLibrary = {
+    click: "assets/sounds/click.wav",
+    win: "assets/sounds/win.wav",
+    lose: "assets/sounds/lose.wav"
+  };
+
+  var audio = new Audio(audioLibrary[audioToPlay]);
+  audio.play();
 }
