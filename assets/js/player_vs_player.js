@@ -1,2 +1,2 @@
-let tictactoe = new TicTacToe();
-tictactoe.createListeners();
+let ticTacToe = new TicTacToe();
+ticTacToe.createListeners();

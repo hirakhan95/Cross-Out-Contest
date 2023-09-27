@@ -123,35 +123,35 @@ class TicTacToe {
 
       // Check if clicked cell should be triggered
       if (
-        tictactoe.board[row][col] === "" &&
-        tictactoe.gameStatus === "started"
+        ticTacToe.board[row][col] === "" &&
+        ticTacToe.gameStatus === "started"
       ) {
         playAudio('click');
         // Getting player character
-        let player = tictactoe.players[tictactoe.currentPlayer];
+        let player = ticTacToe.players[ticTacToe.currentPlayer];
         // Updating UI
         element.textContent = player;
         // Saving state
-        tictactoe.board[row][col] = tictactoe.currentPlayer;
+        ticTacToe.board[row][col] = ticTacToe.currentPlayer;
 
         // Updating for next move
-        if (tictactoe.currentPlayer === 0) tictactoe.currentPlayer = 1;
-        else tictactoe.currentPlayer = 0;
+        if (ticTacToe.currentPlayer === 0) ticTacToe.currentPlayer = 1;
+        else ticTacToe.currentPlayer = 0;
 
         // Whose turn gets called
-        tictactoe.whoseTurn();
+        ticTacToe.whoseTurn();
 
         // Check winner logic
-        let result = tictactoe.checkWinner();
+        let result = ticTacToe.checkWinner();
 
         if (result !== allConstants["noWin"]) {
-          tictactoe.showResults(result);
+          ticTacToe.showResults(result);
 
           if (result !== allConstants["draw"]) {
-            tictactoe.playerScores[result]++;
+            ticTacToe.playerScores[result]++;
 
             // Players scores updated
-            tictactoe.scoresUpdate();
+            ticTacToe.scoresUpdate();
           }
         }
       }
