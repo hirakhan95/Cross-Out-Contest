@@ -70,7 +70,7 @@ body {
 }
 
 /* PopUp Styles */
-.popUp {
+.pop-up {
     display: none;
     position: fixed;
     left: 0;
@@ -83,7 +83,7 @@ body {
     justify-content: center;
   }
   
-.popUpContent {
+.pop-up-content {
     padding: 20px;
     background-color: var(--primary-color);
     border-radius: 10px;
@@ -91,7 +91,7 @@ body {
     text-align: center;
   }
   
-.popUp-button {
+.pop-up-button {
     width: 150px;
 }
 
@@ -220,7 +220,7 @@ body {
         height: 60px;
     }
 
-    .button, .popUp-button {
+    .button, .pop-up-button {
         width: 120px;
     }
 
@@ -249,7 +249,7 @@ body {
         height: 70px;
     }
 
-    .button, .popUp-button {
+    .button, .pop-up-button {
         width: 130px;
     }
 
