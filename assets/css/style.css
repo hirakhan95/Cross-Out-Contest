@@ -7,15 +7,6 @@
     --white-bakcground-light: rgba(0, 0, 0, 0.7);
 }
 
-.logo {
-    width: 40px;  
-    height: auto;
-}
-
-.logo-main-page {
-    width: 60px;
-    height: auto;
-}
 .heading {
     text-align: center;
     margin: 2px 2px 10px 2px;
@@ -28,7 +19,6 @@ h3 {
     border: 3px solid var(--outline-color);
 }
 
-
 body {
     font-family: 'Shadows Into Light';
     font-size: 22px;
@@ -40,6 +30,23 @@ body {
     background-color: var(--secondary-color);
   }
 
+/* PopUp Styles Start */
+
+.logo {
+    width: 40px;  
+    height: auto;
+}
+
+.logo-main-page {
+    width: 60px;
+    height: auto;
+}
+
+/* PopUp Styles End */
+
+
+/* Game Area Styles Starts */
+
 .game-area {
     text-align: center;
     background-color: var(--white-color);
@@ -47,14 +54,14 @@ body {
     border-radius: 20px;
     width: 360px;
     
-  }
+}
 
 #board {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 10px;
     margin-bottom: 1.5rem;
-  }
+}
 
 .cell {
     width: 90px;
@@ -67,9 +74,10 @@ body {
     background-color: #ecf0f1;
     box-shadow: 5px 10px 18px #888888;
     
-  }
+}
+
 .cell:hover {
-    box-shadow: 3px 7px 10px #888888;
+box-shadow: 3px 7px 10px #888888;
   }
 
 .score-area {
@@ -77,7 +85,11 @@ body {
     justify-content: space-between; 
 }
 
-/* PopUp Styles */
+/* Game Area Styles Ends */
+
+
+/* PopUp Style Starts */
+
 .pop-up {
     display: none;
     position: fixed;
@@ -102,6 +114,10 @@ body {
 .pop-up-button {
     width: 150px;
 }
+
+/* PopUp Style Ends */
+
+/** Button Style Starts */
 
 .button {
     font-family: 'Shadows Into Light';
@@ -145,8 +161,6 @@ button:hover {
     transition: 0s
 }
 
-/** Main Page button styling */
-
 .menu-button {
     background-color: var(--primary-color);
     letter-spacing: 2px;
@@ -162,8 +176,9 @@ button:hover {
     margin-top: 100px
     ;
 }
+/** Button Style Ends */
 
-/** Tutorial Page styling */
+/** Tutorial Page Styling Starts */
 
 .tutorial {
     display: flex;
@@ -210,25 +225,28 @@ button:hover {
 }
 
 .button-tutorial {
-        font-family: 'Shadows Into Light';
-        position: relative;
-        width: 150px;
-        background-color: var(--primary-color);
-        border: none;
-        font-size: 20px;
-        color: black;
-        padding: 20px;
-        border-radius: 50%;
-        transition-duration: 0.4s;
-        text-decoration: none;
-        overflow: hidden;
-        cursor: pointer;
-    }
+    font-family: 'Shadows Into Light';
+    position: relative;
+    width: 150px;
+    background-color: var(--primary-color);
+    border: none;
+    font-size: 20px;
+    color: black;
+    padding: 20px;
+    border-radius: 50%;
+    transition-duration: 0.4s;
+    text-decoration: none;
+    overflow: hidden;
+    cursor: pointer;
+}
 .button-div {
     display: flex;
     justify-content: center;
     align-items: center;
 }
+
+/** Tutorial Page Styling Ends */
+
 
 /* --------- Media Queries -----------*/
 
