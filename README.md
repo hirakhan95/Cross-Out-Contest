@@ -30,32 +30,13 @@ Cross Out Contest offers a modern and intuitive design, allowing players to easi
 
 The game uses a simple and elegant color palette to enhance the user experience:
 
-```css
-body {
-  background-color: #fffdb7;
-}
+- secondary-color: `#fffdb7`;
+- primary-color: `#fff`;
+- white-color: `white`;
+- white-light-color: `#f1f1f1`;
+- outline-color: `purple`;
+- white-bakcground-light: `rgba(0, 0, 0, 0.7)`
 
-h3 {
-  border: 3px solid purple;
-}
-
-.cell {
-  background-color: #ecf0f1;
-  box-shadow: 5px 10px 18px #888888;
-}
-
-.popUp {
-  background-color: rgba(0, 0, 0, 0.7);
-}
-
-.popUpContent {
-  background-color: #fff;
-}
-
-.button {
-  background-color: #fffdb7;
-}
-```
 
 ### Game Structure
 
