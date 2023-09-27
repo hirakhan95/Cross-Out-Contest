@@ -181,6 +181,26 @@ body {
     text-align: center;
 }
 
+.button-tutorial {
+        font-family: 'Shadows Into Light';
+        position: relative;
+        width: 150px;
+        background-color: var(--primary-color);
+        border: none;
+        font-size: 20px;
+        color: black;
+        padding: 20px;
+        border-radius: 50%;
+        transition-duration: 0.4s;
+        text-decoration: none;
+        overflow: hidden;
+        cursor: pointer;
+    }
+.button-div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 
 /* --------- Media Queries -----------*/
 
