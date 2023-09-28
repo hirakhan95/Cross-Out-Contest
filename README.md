@@ -39,7 +39,8 @@ The game uses a simple and elegant color palette to enhance the user experience:
 
 - **Cross Out Contest Logo and Heading**
 
-  - Displayed prominently on the main page, this ensures that the user immediately recognizes the game.![Logo](assets/readme/logo-and-heading.png)
+  - Displayed prominently on the main page, this ensures that the user immediately recognizes the game
+    ![Logo](assets/readme/logo-and-heading.png)
 
 - **Two Players Game**
 
@@ -53,7 +54,8 @@ The game uses a simple and elegant color palette to enhance the user experience:
 
 - **Whose Turn Box**
 
-  - Whose-turn-box will kepp you updated whether it's your turn or it's the other player/computer's turn.![Logo](assets/readme/whose-turn-box.png)
+  - Whose-turn-box will kepp you updated whether it's your turn or it's the other player/computer's turn.
+    ![Logo](assets/readme/whose-turn-box.png)
 
 - **Score Tracker**
 
