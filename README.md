@@ -40,41 +40,49 @@ The game uses a simple and elegant color palette to enhance the user experience:
 - **Cross Out Contest Logo and Heading**
 
   - Displayed prominently on the main page, this ensures that the user immediately recognizes the game
+
     ![Logo](assets/readme/logo-and-heading.png)
 
 - **Two Players Game**
 
   - Players can easily tap/click on a cell to play against another player.
+
     ![Logo](assets/readme/two-players.png)
 
 - **Player Vs Computer**
 
   - Users can also play in player vs computer mode.
+
     ![Logo](assets/readme/player-vs-computer.png)
 
 - **Whose Turn Box**
 
   - Whose-turn-box will kepp you updated whether it's your turn or it's the other player/computer's turn.
+
     ![Logo](assets/readme/whose-turn-box.png)
 
 - **Score Tracker**
 
   - Always stay updated on who's leading with the score board that registers every win, loss, or tie.
+
     ![Logo](assets/readme/score-board.png)
 
 - **Play Again and Exit Button**
 
   - You can leave the game in the middle and can restart the game all over again.
+
     ![Logo](assets/readme/play-again-and-exit-buttons.png)
 
 - **Result Pop Up**
 
   - The result pop up shows if the user has won, lost or the game is draw.
+
     ![Logo](assets/readme/result-popup.png)
 
 - **Tutorial Page**
 
   - There's a tutorial page for the users if they don't know the game rules. The pictorial representation makes it very understandable.
+
     ![Tutorial](assets/readme/tutorial-page.png)
 
 ### Future Feature to be added
