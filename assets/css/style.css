@@ -50,10 +50,17 @@ body {
 .game-area {
     text-align: center;
     background-color: var(--white-color);
-    padding: 2rem;
     border-radius: 20px;
     width: 360px;
     
+}
+
+.game-area-tutorial{
+    padding: 2rem;
+}
+
+.game-area-main{
+    padding: 2rem;
 }
 
 #board {
@@ -117,6 +124,7 @@ box-shadow: 3px 7px 10px #888888;
 
 /* PopUp Style Ends */
 
+
 /** Button Style Starts */
 
 .button {
@@ -139,7 +147,6 @@ box-shadow: 3px 7px 10px #888888;
 button:hover {
     letter-spacing: 1px;
 }
-
 
 .button:after {
     content: "";
@@ -177,6 +184,7 @@ button:hover {
     ;
 }
 /** Button Style Ends */
+
 
 /** Tutorial Page Styling Starts */
 
@@ -248,7 +256,7 @@ button:hover {
 /** Tutorial Page Styling Ends */
 
 
-/* --------- Media Queries -----------*/
+/* --------------- Media Queries ---------------*/
 
 @media only screen and (max-width: 768px) {
     body {
@@ -257,7 +265,15 @@ button:hover {
 
     .game-area {
         width: 90%;
-        padding: 1rem;
+        
+    }
+
+    .game-area-main{
+        padding: 25px 0px 25px 30px
+    }
+
+    .game-area-tutorial{
+        padding: 16px 30px 16px 20px;
     }
 
     #board, .board-small {
@@ -274,12 +290,13 @@ button:hover {
     }
 
     .tutorial {
-        flex-direction: column;
+        flex-wrap: wrap;
         align-items: center;
+        justify-content: center;
     }
 
     .tutorial > div {
-        margin-right: 0;
+        margin-right: 20px;
         margin-bottom: 20px;
     }
 
@@ -291,11 +308,31 @@ button:hover {
 @media only screen and (min-width: 769px) and (max-width: 1024px) {
     .game-area {
         width: 80%;
+        
+    }
+
+    .game-area-main{
+        padding: 25px 25px 25px 30px
+    }
+
+    .game-area-tutorial{
+        padding: 20px 45px 10px 20px;
     }
 
     .cell, .cell-tutorial {
         width: 70px;
         height: 70px;
+    }
+
+    .tutorial {
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .tutorial > div {
+        margin-right: 20px;
+        margin-bottom: 20px;
     }
 
     .button, .pop-up-button {
