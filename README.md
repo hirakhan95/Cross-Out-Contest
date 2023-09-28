@@ -26,7 +26,12 @@ Cross Out Contest is a classic two-player game, also known as Tic Tac Toe or Xs 
 
 The game uses a simple and elegant color palette to enhance the user experience:
 
-![Color Palette](assets/readme/color-pallete.png)
+- secondary-color: `#fffdb7`;
+- primary-color: `#fff`;
+- white-color: `white`;
+- white-light-color: `#f1f1f1`;
+- outline-color: `purple`;
+- white-bakcground-light: `rgba(0, 0, 0, 0.7)`
 
 ### Features
 
@@ -42,49 +47,37 @@ The game uses a simple and elegant color palette to enhance the user experience:
 
   - Players can easily tap/click on a cell to play against another player.
 
-    <div style="width: 200px" align="center">
-      <img src="assets/readme/two-players.png" >
-    </div>
+![Logo](assets/readme/two-players.png)
 
 - **Player Vs Computer**
 
   - Users can also play in player vs computer mode.
 
-    <div style="width: 200px" align="center">
-      <img src="assets/readme/player-vs-computer.png" >
-    </div>
+![Logo](assets/readme/player-vs-computer.png)
 
 - **Whose Turn Box**
 
   - Whose-turn-box will kepp you updated whether it's your turn or it's the other player/computer's turn.
 
-    <div style="width: 200px" align="center">
-      <img src="assets/readme/whose-turn-box.png" >
-    </div>
+![Logo](assets/readme/whose-turn-box.png)
 
 - **Score Tracker**
 
   - Always stay updated on who's leading with the score board that registers every win, loss, or tie.
 
-    <div style="width: 300px" align="center">
-      <img src="assets/readme/score-board.png" >
-    </div>
+![Logo](assets/readme/score-board.png)
 
 - **Play Again and Exit Button**
 
   - You can leave the game in the middle and can restart the game all over again.
 
-    <div style="width: 200px" align="center">
-      <img src="assets/readme/play-again-and-exit-buttons.png" >
-    </div>
+![Logo](assets/readme/play-again-and-exit-buttons.png)
 
 - **Result Pop Up**
 
   - The result pop up shows if the user has won, lost or the game is draw.
 
-    <div style="width: 200px" align="center">
-      <img src="assets/readme/result-popup.png" >
-    </div>
+![Logo](assets/readme/result-popup.png)
 
 - **Tutorial Page**
 
